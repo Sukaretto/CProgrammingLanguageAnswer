@@ -1,6 +1,6 @@
 /* strindex which returns rightmost occurance */
 #include <stdio.h>
-#include <string.h>
+
 #define MAXLINE 500
 
 int strindex(char search[],char target[]);
@@ -46,7 +46,7 @@ int strindex(char search[],char target[]) {
 
     int i, j, k, occur = -1;
 
-    for (i = 0; strlen(search) - 1 >= i; i++)
+    for (i = 0; search[i]!='\0' ; i++)
     {
         for (j = i, k = 0; target[k] != '\0' && search[j] == target[k]; j++, k++)
         {
